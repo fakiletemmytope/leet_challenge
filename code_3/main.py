@@ -14,8 +14,9 @@ def lengthOfLongestSubstring(s: str) -> int:
                     #print(substring)
                     if s[i] != substring[-1]:
                         for j in range(len(substring)):
-                            if substring[j] == [i]:
-                                new_substring = substring[:j]
+                            if substring[j] == s[i]:
+                                k = j+1
+                                new_substring = substring[k:]
                                 print(new_substring)
                                 list_of_substring.append(len(substring))
                                 substring = new_substring
@@ -37,17 +38,18 @@ def lengthOfLongestSubstring(s: str) -> int:
         value = list_of_substring[-1]
         return value
 
-s = "ckilbkd"
+s = "dvdf"
 print(lengthOfLongestSubstring(s))
+# print(s[1:])
 
-s = "bbbbb"
-print(lengthOfLongestSubstring(s))
+# s = "bbbbb"
+# print(lengthOfLongestSubstring(s))
 
-s = "pwwkew"
-print(lengthOfLongestSubstring(s))
+# s = "pwwkew"
+# print(lengthOfLongestSubstring(s))
 
-s = ""
-print(lengthOfLongestSubstring(s))
+# s = ""
+# print(lengthOfLongestSubstring(s))
 
-s = " "
-print(lengthOfLongestSubstring(s))
+# s = " "
+# print(lengthOfLongestSubstring(s))
