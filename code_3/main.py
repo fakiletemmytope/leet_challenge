@@ -37,7 +37,7 @@ def lengthOfLongestSubstring(s: str) -> int:
         value = list_of_substring[-1]
         return value
 
-s = "anviaj"
+s = "ckilbkd"
 print(lengthOfLongestSubstring(s))
 
 s = "bbbbb"
